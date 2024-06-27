@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sayfa.css">
+    <link rel="stylesheet" href="kayıt.css">
+    <title>Sohbet Uygulaması</title>
+</head>
+<body>
+<div class="register inactive" id="registerContainer">
+    <h2>Kaydol</h2>
+    <input type="text" class="username" id="regUsername" placeholder="Kullanıcı Adı">
+    <input type="password" class="password" id="regPassword" placeholder="Sifre" minlength="8" required>
+    <button onclick="register()">Kaydol</button>
+    <button onclick="backtoLog()">Giriş Yap</button>
+</div>
+<div class="login active" id="loginContainer">
+    <h2>Giriş Yap</h2>
+    <input type="text" class="username" id="logUsername" placeholder="Kullanıcı Adı">
+    <input type="password" class="password" id="logPassword" placeholder="Sifre" minlength="8" required>
+    <button onclick="login()">Giriş</button>
+    <button class="kaydol" onclick="backtoReg()">Kaydol</button>
+</div>
+
+<div class="chat inactive" id="chatContainer">
+    <h2>Sohbet</h2>
+    <div class="chat-messages" id="chatMessages">
+    </div>
+    <input type="text" id="message" placeholder="Mesajınızı yazın...">
+    <button onclick="sendMessage()">Gönder</button>
+    <button class="logout" onclick="logOut()">Çıkış Yap</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="sayfa.js"></script>
+</body>
+</html>
