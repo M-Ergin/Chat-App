@@ -7,5 +7,5 @@ To run the app:
 3. npm i socketio
 4. npm i express
 5. npm i uuid
-6. node server.js
+6. node server.js  
    if you have the packages installed step 6 will be enough.
