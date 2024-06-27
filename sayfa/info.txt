@@ -1,0 +1,2 @@
+kayıt.css contains login/register screen infos
+sayfa.css contains the mainpage infos
